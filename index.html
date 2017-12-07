@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<html>
+
+<head>
+  <script src="./subnet_ip.js"></script>
+  <title>IP Subnet Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+
+<body style="margin-left:300px; margin-right:300px;background-color:powderblue;" >
+  <div class="header">
+    <p class="header" id="Topic" style="margin-top:20px; text-align: center; font-size:36px; font-face:verdana">IP Subnet Calculator</p>
+    <hr>
+    <div class="subnet-table">
+      <table align="center" class="set-table">
+        <form id="form_network_class" action="javascript:change_subnet();">
+            <tr>
+              <td id="table-1-L">
+                <b>NETWORK CLASS</b>
+              </td>
+              <td id="table-1-R">
+                <input name="network_class" type="radio" value="any" onclick="this.form.submit();" checked> ANY
+                <input name="network_class" type="radio" value="A" onclick="this.form.submit();" style="margin-left:10px"> A
+                <input name="network_class" type="radio" value="B" onclick="this.form.submit();" style="margin-left:10px"> B
+                <input name="network_class" type="radio" value="C" onclick="this.form.submit();" style="margin-left:10px"> C
+              </td>
+            </tr>
+          </form>
+          <form id="form_calculate" action="javascript:get_result();">
+            <tr>
+              <td id="table-1-L">
+                <b>SUBNET</b>
+              </td>
+              <td id="table-1-R" >
+                <select class="decorated"name="subnet" id="subnet" >
+                  <script> javascript:createChoice(1); </script>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td id="table-1-L">
+                <b>IP ADDRESS</b>
+              </td>
+              <td id="table-1-R">
+                <input id="IP_Address" type="text" value="" pattern="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)">
+              </td>
+            </tr>
+            <tr><td align="right"><button type="submit" class='button -regular'> CALCULATE </button><td></tr>
+            </form>
+          </table>
+        </div>
+    </div>
+    <hr>
+    <div class="row" id="result" style="margin-top:10px;"> 
+    <div class="col-md-12">
+          <div id="div-table-2" ></div>
+    </div>
+    <hr>
+    <div class="col-md-12" style="margin-top:50px;">
+          <div id="div-table-3" ></div>
+    </div>
+  </div>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
